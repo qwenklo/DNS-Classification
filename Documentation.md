@@ -154,15 +154,12 @@ These files are **essential** for the machine learning workflow:
 #### 9. **Documentation**
 - **`README.md`** - Quick start guide
 - **`README_SETUP.md`** - Detailed setup instructions
-- **`ARCHITECTURE_ANALYSIS.md`** - Architecture justification
 - **`Documentation.md`** - This comprehensive documentation
 
 ### 🟢 **Supporting Files (Alternative/Helper)**
 
 #### 10. **Alternative Scripts**
-- **`train_mlp.py`** - Alternative training script
 - **`preprocess.py`** - Alternative preprocessing (sklearn-based)
-- **`dns_model.py`** - Alternative model definition
 
 ### 📦 **Generated Files (Created During Execution)**
 
