@@ -20,24 +20,37 @@ This project implements a complete Deep Learning pipeline for DNS traffic classi
 ```
 DNS2021/
 ├── Data/
-│   ├── CSVs/
-│   │   ├── CSV_benign.csv
-│   │   ├── CSV_malware.csv
-│   │   ├── CSV_phishing.csv
-│   │   └── CSV_spam.csv
-│   └── SecondDay/
-├── processed_data/          # Preprocessed data (generated)
-├── models/                  # Saved models (generated)
-├── config.yaml              # Configuration file
-├── preprocess.py            # Initial data preprocessing
-├── dns_preprocess.py        # PyTorch DataLoader creation
-├── dns_model.py             # PyTorch neural network model
-├── DNSAssignment.py         # Main training script ⭐
-├── convert.py               # ONNX conversion script
-├── onnxtest.py              # ONNX model testing
-├── model.py                 # Sklearn models (alternative)
-├── README.md                # This file
-└── Documentation.md         # Detailed documentation
+│   └── DNS2021/
+│       ├── csv/                                    # Raw CSV files (downloaded)
+│       │   ├── CSV_benign.csv
+│       │   ├── CSV_malware.csv
+│       │   ├── CSV_phishing.csv
+│       │   └── CSV_spam.csv
+│       ├── preprocess_csv.py                       # Data preprocessing script ⭐
+│       ├── train.npy                               # Training data (features + labels)
+│       ├── test.npy                                 # Test data
+│       ├── val.npy                                  # Validation data
+│       └── class_names.npy                          # Class names array
+│
+├── DNSAssignment.py                                 # Main training script ⭐
+├── model.py                                         # Neural network architecture + sklearn models
+├── dns_model.py                                     # PyTorch DNSModel (alternative)
+├── dns_preprocess.py                                # PyTorch DataLoader creation ⭐
+├── convert.py                                       # PyTorch to ONNX conversion ⭐
+├── onnxtest.py                                      # ONNX model testing ⭐
+├── preprocess.py                                    # Alternative preprocessing (sklearn-based)
+├── train_mlp.py                                     # Alternative training script
+├── config.yaml                                      # Training configuration ⭐
+├── DNS-Assignment2025.pth                           # Trained model weights (generated)
+├── DNS-Assignment2025.onnx                          # ONNX model file (generated)
+├── scaler.pkl                                       # Saved StandardScaler (generated)
+├── requirements.txt                                 # Python dependencies ⭐
+├── README.md                                        # Project overview
+├── README_SETUP.md                                  # Setup instructions
+├── ARCHITECTURE_ANALYSIS.md                         # Architecture justification
+├── Documentation.md                                 # This file
+├── wandb/                                           # WandB experiment logs (generated)
+└── models/                                          # Additional model checkpoints (generated)
 ```
 
 ## Quick Start
@@ -211,5 +224,6 @@ University of New Brunswick (UNB)
 Website: https://www.unb.ca/cic
 
 Dataset page: https://www.unb.ca/cic/datasets/dns-2021.html
+
 
 
