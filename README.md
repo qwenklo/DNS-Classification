@@ -231,9 +231,11 @@ Dataset page: https://www.unb.ca/cic/datasets/dns-2021.html
 
 <img width="3160" height="1660" alt="W B Chart 29_12_2025, 3_56_58 pm" src="https://github.com/user-attachments/assets/b6f230b5-4a97-45b1-8eb4-f6ba4da9f8ba" />
 
-<img width="3160" height="1660" alt="W B Chart 29_12_2025, 3_56_58 pm" src="https://github.com/user-attachments/assets/1dc4fddb-e40b-48b5-9761-a7c60965120b" />
+<img width="3160" height="1660" alt="W B Chart 29_12_2025, 3_57_30 pm" src="https://github.com/user-attachments/assets/cffa1d21-18da-4bf3-a4f0-31ac83838c19" />
+
 
 <img width="3160" height="1660" alt="W B Chart 29_12_2025, 3_57_48 pm" src="https://github.com/user-attachments/assets/9ce7d62c-5754-4bd3-b6d1-b0230d3f1520" />
+
 
 
 
