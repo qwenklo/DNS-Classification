@@ -19,7 +19,7 @@ import os
 # =========================
 # CONFIG
 # =========================
-WANDB_KEY = "f16133b01f4cb7007f0ee94a4c59eeff475240f9" 
+WANDB_KEY = "Put your API key here" 
 WANDB_PROJECT = "DNS-Assignment2025"
 
 # Data paths (relative to script location)
@@ -348,3 +348,4 @@ if __name__ == "__main__":
     
     if wandb.run is not None:
         wandb.finish()
+
