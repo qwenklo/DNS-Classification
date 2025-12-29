@@ -1,0 +1,19 @@
+# Configuration file for DNS Classification Project
+# CIC-Bell-DNS 2021 Dataset
+
+# Class labels
+class_names:
+  - 'Benign'
+  - 'Malware'
+  - 'Phishing'
+  - 'Spam'
+
+# Training configuration
+batch_size: 128
+learning_rate: 0.001
+num_epochs: 50
+
+# Regularization (to prevent overfitting)
+# If val_loss >> train_loss, increase these values:
+# dropout: 0.3  # Higher = more regularization (0.2-0.5 recommended)
+# weight_decay: 1e-4  # Higher = more regularization (1e-5 to 1e-3 recommended)

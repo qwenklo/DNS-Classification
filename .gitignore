@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# PyTorch
+*.pth
+*.pt
+
+# Data files (large)
+*.npy
+*.csv
+*.pkl
+!requirements.txt
+
+# WandB
+wandb/
+.wandb/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model files (generated)
+models/
+*.onnx
+scaler.pkl
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
