@@ -47,6 +47,29 @@
 - **Classes**: 4 (Benign, Malware, Phishing, Spam)
 - **Features**: Tabular features extracted from DNS traffic
 
+## Results & Key Findings
+
+Based on training runs (WandB summaries):
+
+- **Test Accuracy:** ~**93–94%**
+- **Test F1 (Weighted):** ~**91%**
+- **Test F1 (Macro):** varies (example runs show ~**42–66%**)
+
+### Interpretation (simple)
+- **Accuracy & Weighted F1 are high** because the dataset is likely **imbalanced** (majority class contributes heavily to these metrics).
+- **Macro F1 is lower** because it treats every class equally, so weaker performance on minority classes (Malware/Phishing/Spam) lowers the score.
+
+### Notes on Validation Loss “spike”
+Occasional **validation loss spikes** can happen due to:
+- minority-class batches being harder,
+- class imbalance,
+- noisy/outlier samples,
+- small validation batches or distribution differences.
+
+This is acceptable as long as:
+- overall validation trend improves,
+- test performance remains stable,
+
 ---
 
 ## Project Structure
@@ -1030,41 +1053,6 @@ Before training, the script validates:
 - Increase model capacity
 - Add more training data
 - Tune hyperparameters
-
----
-
-## Best Practices
-
-### Code Organization
-
-1. **Modular Functions**: Each function has a single responsibility
-2. **Reusable Components**: Training loop, evaluation, preprocessing are separate
-3. **Configuration-Driven**: Parameters in config.yaml, not hardcoded
-4. **Error Handling**: Validation checks prevent common errors
-
-### Training Practices
-
-1. **Early Stopping**: Prevents overfitting
-2. **Learning Rate Scheduling**: Adapts learning rate during training
-3. **Gradient Clipping**: Prevents exploding gradients
-4. **Regularization**: Dropout and batch normalization
-5. **Validation**: Separate validation set for model selection
-
-### Data Practices
-
-1. **Proper Splits**: Train/validation/test separation (70/15/15)
-2. **Normalization**: StandardScaler for feature scaling
-3. **Label Encoding**: Consistent label mapping
-4. **Missing Values**: Proper handling of NaN and infinity
-5. **Stratified Splitting**: Maintains class distribution
-
-### Deployment Practices
-
-1. **ONNX Export**: Standard format for deployment
-2. **Scaler Persistence**: Save preprocessing for inference
-3. **Performance Testing**: Benchmark before deployment
-4. **GPU/CPU Support**: Flexible provider selection
-5. **Model Verification**: Compare ONNX with PyTorch model
 
 ---
 
